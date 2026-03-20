@@ -9,6 +9,10 @@ class MyClass:
     def __lt__(self, other):
         pass
 
+def strings(): 
+    pass
+    # lower, upper, strip
+
 def lists():
     l = [ 'a', 1, 1.0, True ]
     l.append(3) # Add to end.
@@ -27,6 +31,7 @@ def lists():
     l[0] # 1
     l[-1] # 5
     l[1:4] # [2, 3, 4])
+    len(l)
 
 
 def stacks():
@@ -34,39 +39,42 @@ def stacks():
     st.append(4)
     st.pop()
 
-def sets():
+def sets(): # unordered collection, no duplicates.
     s = { "apple", 1, True }
     'apple' in s   
     'DNE' not in s
     (s | s), (s & s), (s - s), (s ^ s)
 
 
-def dictionaries():
+def dictionaries(): # Key-value pairs, key is unique
     d = { 
         "key": "value",
         "key1": True,
         "key2": 23
     }
     d["foo"] = "bar"
+    'key' in d
+    'DNE' not in d
     d.get('DNE') # Return None on DNE.
     d["DNE"] # Raise KeyError on DNE.
     del d["key2"] # Delete pair from dict
     list(d) # Return keys
     sorted(d) # Keys (sorted)
-    'key' in d
-    'DNE' not in d
-
+    
     for key, value in d.copy().items():
         print(key, value)
     
 def looping():
-    for index, value in enumerate(['tic', 'tac', 'toe']):
+    for index, value in enumerate(['tic', 'tac', 'toe']): # For sequences
         print(index, value)
 
     arr1 = ['name', 'quest', 'favorite color']
     arr2 = ['lancelot', 'the holy grail', 'blue']
     for value1, value2 in zip(arr1, arr2):
         print(value1, value2)
+
+    for s in sorted(arr1):
+        pass
 
 def heapq(self):
         import heapq # min-heap by default
@@ -83,8 +91,19 @@ def deque(self):
     d.pop() # remove from the right end
     d.popleft() # remove from the left end
 
-def main():
+def trees(self):
+    # PREORDER: ROOT, LEFT, RIGHT = STACK PRINT, PRIGHT, PLEFT
+    # 
+
+def bitwise():
     pass
+    '''
+    XOR
+    0 ^ 0 = 0
+    1 ^ 1 = 0
+    1 ^ 0 = 1
+    0 ^ 1 = 1
+    '''
 
 if __name__ == "__main__" :
-    main()
+    bitwise()
