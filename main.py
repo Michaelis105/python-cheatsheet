@@ -20,7 +20,7 @@ def lists():
     l.remove('a') # Remove first item equal - raise ValueError on DNE.
     l.pop(3) # Remove and return element at index, tail if undefined
     l.clear() # Deletes all elements, similar to `del list`
-    l.index(1.0, start=0, end=1) # Return index first occurrence, start end range opt.
+    l.index(1.0, start=0, end=1) # Return index first occurrence, start end range opt. Throws ValueError on not found
     l.count(True) # Return count of occurrence.
     l.sort(key=lambda x: -x, reverse=False) # Sort items asc in place.
     l.reverse() # Reverse in place.
@@ -35,12 +35,13 @@ def lists():
 
 
 def stacks():
-    st = [ 1, 2, 3]
+    st = [ 1, 2, 3 ]
     st.append(4)
     st.pop()
 
 def sets(): # unordered collection, no duplicates.
     s = { "apple", 1, True }
+    s.add("banana") # Add element to set
     'apple' in s   
     'DNE' not in s
     (s | s), (s & s), (s - s), (s ^ s)
@@ -94,6 +95,11 @@ def deque(self):
 def trees(self):
     # PREORDER: ROOT, LEFT, RIGHT = STACK PRINT, PRIGHT, PLEFT
     # 
+    pass
+
+def lambdas(self):
+    sorted([5, 2, 9, 1, 5, 6], key=lambda x: -x) # Sort in descending order
+    #sortedIntervals = sorted(intervals, key=lambda i: i[0]) # Sort intervals by start time
 
 def bitwise():
     pass
@@ -104,6 +110,18 @@ def bitwise():
     1 ^ 0 = 1
     0 ^ 1 = 1
     '''
+
+def exceptionHandling():
+    try:
+        x = 1 / 0
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        e.add_note("This is a note about the exception") # add additional information to the exception
+        raise(e) # re-raise the exception after handling it
+    #except:
+        #print("An error occurred")
+    finally:
+        print("This will always execute")
 
 if __name__ == "__main__" :
     bitwise()
