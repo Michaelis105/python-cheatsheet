@@ -48,17 +48,13 @@ def sets(): # unordered collection, no duplicates.
 
 
 def dictionaries(): # Key-value pairs, key is unique
-    d = { 
-        "key": "value",
-        "key1": True,
-        "key2": 23
-    }
+    d = { "key": "value", "k1": True, "k2": 23 }
     d["foo"] = "bar"
     'key' in d
     'DNE' not in d
     d.get('DNE') # Return None on DNE.
     d["DNE"] # Raise KeyError on DNE.
-    del d["key2"] # Delete pair from dict
+    del d["k2"] # Delete pair from dict
     list(d) # Return keys
     sorted(d) # Keys (sorted)
     
