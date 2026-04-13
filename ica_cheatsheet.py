@@ -86,3 +86,7 @@ class MyClass:
         seen = set()
         deduped = [x for x in items
                 if not (x in seen or seen.add(x))]
+        
+    def others(self):
+        import json
+        json.loads('{"name": "Alice", "age": 30}') # Returns a dictionary
